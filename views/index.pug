@@ -1,0 +1,123 @@
+extends layout
+block head
+  title Добрый эль
+  link(rel='stylesheet', href='/assets/style.css')
+  link(rel="stylesheet", href="/assets/vendor.css")
+  link(rel='shortcut icon' href='/images/beer.png' type='image/png')
+block content
+  section.header
+    img(src="/images/fonHeader.png", alt="").header__bg
+    .wrap
+      ul.header__bar
+        img(src="/images/beer.png", alt="").header__bar-item_border
+        li.header__bar-item Главная
+        img(src="/images/beer.png", alt="").header__bar-item_border
+        li.header__bar-item О нас
+        img(src="/images/beer.png", alt="").header__bar-item_border
+        //- li.header__bar-item Пивоварня
+        //- img(src="/images/beer.png", alt="").header__bar-item_border
+        //- li.header__bar-item Где купить
+        //- img(src="/images/beer.png", alt="").header__bar-item_border
+        //- li.header__bar-item Партнерам
+        //- img(src="/images/beer.png", alt="").header__bar-item_border
+        //- li.header__bar-item Доставка
+        //- img(src="/images/beer.png", alt="").header__bar-item_border
+        li.header__bar-item Контакты
+        img(src="/images/beer.png", alt="").header__bar-item_border
+
+      h1.header__title Добрый Эль
+
+  section.product.wrap
+    p.product__title Продукция
+
+    .product__wrap
+      .product-card
+        img(src="/images/card.png", alt="").product-card__bg
+        .product-card__description 
+          p.product-card__price 490 P 
+          p.product-card__title СМОРОДИНОВАЯ МЕДОВУХА
+          p.product-card__structure Плотность (OE), % - 20, Алкоголь (ABV), % - 5,8
+
+      .product-card
+        img(src="/images/card.png", alt="").product-card__bg
+        .product-card__description 
+          p.product-card__price 490 P 
+          p.product-card__title СМОРОДИНОВАЯ МЕДОВУХА
+          p.product-card__structure Плотность (OE), % - 20, Алкоголь (ABV), % - 5,8
+
+      .product-card
+        img(src="/images/card.png", alt="").product-card__bg
+        .product-card__description 
+          p.product-card__price 490 P 
+          p.product-card__title СМОРОДИНОВАЯ МЕДОВУХА
+          p.product-card__structure Плотность (OE), % - 20, Алкоголь (ABV), % - 5,8
+
+      .product-card
+        img(src="/images/card.png", alt="").product-card__bg
+        .product-card__description 
+          p.product-card__price 490 P 
+          p.product-card__title СМОРОДИНОВАЯ МЕДОВУХА
+          p.product-card__structure Плотность (OE), % - 20, Алкоголь (ABV), % - 5,8
+
+      .product-card
+        img(src="/images/card.png", alt="").product-card__bg
+        .product-card__description 
+          p.product-card__price 490 P 
+          p.product-card__title СМОРОДИНОВАЯ МЕДОВУХА
+          p.product-card__structure Плотность (OE), % - 20, Алкоголь (ABV), % - 5,8
+
+      .product-card
+        img(src="/images/card.png", alt="").product-card__bg
+        .product-card__description 
+          p.product-card__price 490 P 
+          p.product-card__title СМОРОДИНОВАЯ МЕДОВУХА
+          p.product-card__structure Плотность (OE), % - 20, Алкоголь (ABV), % - 5,8
+
+  section.news.wrap
+    p.news__title Последние спортивные новости
+    .news__wrap 
+      .news-card(data-src="/images/Fon-News.png")
+        .news-card_bg
+          p.news-card__date 11.01.2021
+          p.news-card__title "Ростов» – «Урал"!
+          p.news-card__text Российская Премьер-Лига. "Ростов» – «Урал"! Смотрим прямую трансляцию матча в 19:00! Болеем за "Ростов"!
+
+      .news-card(data-src="/images/Fon-News2.png")
+        .news-card_bg
+          p.news-card__date 11.01.2021
+          p.news-card__title "Ростов» – «Урал"!
+          p.news-card__text Российская Премьер-Лига. "Ростов» – «Урал"! Смотрим прямую трансляцию матча в 19:00! Болеем за "Ростов"!
+
+      .news-card
+        .news-card_bg
+          p.news-card__date 11.01.2021
+          p.news-card__title "Ростов» – «Урал"!
+          p.news-card__text Российская Премьер-Лига. "Ростов» – «Урал"! Смотрим прямую трансляцию матча в 19:00! Болеем за "Ростов"!
+
+      .news-card
+        .news-card_bg
+          p.news-card__date 11.01.2021
+          p.news-card__title "Ростов» – «Урал"!
+          p.news-card__text Российская Премьер-Лига. "Ростов» – «Урал"! Смотрим прямую трансляцию матча в 19:00! Болеем за "Ростов"!
+
+  section.footer
+    .wrap.footer__wrap 
+      .footer__info 
+        img(src="/images/logo-mini.png", alt="").footer__info-logo
+        p.footer__info-text 2021 © Все  права защищены
+        .footer__info-text 
+          img(src="/images/mail 1.png", alt="").footer__info_icon
+          p help-pivoale@mail.ru
+        .footer__info-text 
+          img(src="/images/phone-call 1.png", alt="").footer__info_icon
+          p +7 (999) 222-34-23
+      .footer__links
+        a(href="https://vk.com/dobriyell")
+          img(src="/images/vk-reproductor 1.png", alt="").footer__links_icon
+
+        a(href="https://www.instagram.com/pivoale/?igshid=164qwx2yf4n02")
+          img(src="/images/instagram 1.png", alt="").footer__links_icon 
+
+block footer
+    script(src="/assets/vendor.js")
+    script(src="/assets/app.js")

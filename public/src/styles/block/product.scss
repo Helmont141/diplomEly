@@ -1,0 +1,28 @@
+.product {
+  background: #fff;
+  border-radius: 8px 8px 0px 0px;
+  margin-top: 80px;
+  padding-bottom: 130px;
+
+  &__title {
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 44px;
+    color: #000000;
+    text-align: center;
+    padding-top: 64px;
+  }
+
+  &__wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 56px auto 0;
+    width: 90%;
+
+    @include _768 {
+      justify-content: space-around;
+    }
+  }
+}
