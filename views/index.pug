@@ -4,15 +4,16 @@ block head
   link(rel='stylesheet', href='/assets/style.css')
   link(rel="stylesheet", href="/assets/vendor.css")
   link(rel='shortcut icon' href='/images/beer.png' type='image/png')
+  script(src="https://api-maps.yandex.ru/2.1/?apikey=6d5d76f3-8360-43a5-b6ba-ba62da5950bb,150&lang=ru_RU" type="text/javascript")
 block content
   section.header
     img(src="/images/fonHeader.png", alt="").header__bg
     .wrap
       ul.header__bar
         img(src="/images/beer.png", alt="").header__bar-item_border
-        li.header__bar-item Главная
+        li.header__bar-item(data-url="/") Главная
         img(src="/images/beer.png", alt="").header__bar-item_border
-        li.header__bar-item О нас
+        li.header__bar-item(data-url="/about") О нас
         img(src="/images/beer.png", alt="").header__bar-item_border
         //- li.header__bar-item Пивоварня
         //- img(src="/images/beer.png", alt="").header__bar-item_border
@@ -22,7 +23,7 @@ block content
         //- img(src="/images/beer.png", alt="").header__bar-item_border
         //- li.header__bar-item Доставка
         //- img(src="/images/beer.png", alt="").header__bar-item_border
-        li.header__bar-item Контакты
+        li.header__bar-item(data-url="/kontacts") Контакты
         img(src="/images/beer.png", alt="").header__bar-item_border
 
       h1.header__title Добрый Эль
@@ -100,6 +101,35 @@ block content
           p.news-card__title "Ростов» – «Урал"!
           p.news-card__text Российская Премьер-Лига. "Ростов» – «Урал"! Смотрим прямую трансляцию матча в 19:00! Болеем за "Ростов"!
 
+  section.about.wrap 
+    p.about__title о нас
+    p.about__description Интерес к пивной культуре постоянно растет - появляется все больше пивных энтузиастов и экспертов, открываются тематические пивные бары и пабы, появляются небольшие частные пивоварни, работающие для тех, кто сделал выбор в сторону многообразия пивного ассортимента.
+
+    p.about__description Порядка 30 лет назад в США, благодаря активной деятельности домашних пивоваров, появилось ремесленное производство пива, которое позже назовут "крафтовым" и которое впервые стало серьезной альтернативой массовому продукту.
+
+    p.about__description Крафтовые пивоварни это не просто маленькие фирмы, производящие продукцию в небольших объёмах - это особенная философия работы, когда ты стремишься сохраняя традиции производить оригинальный натуральный продукт, когда каждый сваренный сорт - это результат долгих поисков, экспериментов и смелого вкусового выбора.
+
+    p.about__description  Поклонники крафтового пива - это те, кто выбирая европейские традиции пивоварения хочет избежать сомнений в подлинности производителя, кто ценит ощущение уникальности, кто любит качественный продукт и многообразие вкуса!
+
+    p.about__description Именно для таких ценителей крафтового пива работает "Пивоварня Добрый Эль"!
+
+    p.about__description Мы предлагаем Вам попробовать наши оригинальные сорта и приглашаем бизнес-партнеров к сотрудничеству! 
+
+  section.kontacts.wrap
+    #map 
+    p.kontacts__title КОНТАКТНОЕ ИНФОРМАЦИЯ
+    .kontacts__info
+      .kontacts__info-block 
+        p По вопросам снабжения #[br] производства обращайтесь по тел.:#[br] +7 (863) 262-02-33 или #[br] e-mail: pivovarnya_97@mail.ru
+      .kontacts__info-block_column
+        .kontacts__info-block_row 
+          img(src="/images/phone-call (1) 1.png", alt="").kontacts__info-block_icon
+          p +7 (863) 262-02-33
+        .kontacts__info-block_row 
+          img(src="/images/navigation 1.png", alt="").kontacts__info-block_icon
+          p г. Ростов-на-Дону, бул. Комарова, 9
+
+
   section.footer
     .wrap.footer__wrap 
       .footer__info 
@@ -107,10 +137,10 @@ block content
         p.footer__info-text 2021 © Все  права защищены
         .footer__info-text 
           img(src="/images/mail 1.png", alt="").footer__info_icon
-          p help-pivoale@mail.ru
+          p pivovarnya_97@mail.ru
         .footer__info-text 
           img(src="/images/phone-call 1.png", alt="").footer__info_icon
-          p +7 (999) 222-34-23
+          p +7 (863) 262-02-33 
       .footer__links
         a(href="https://vk.com/dobriyell")
           img(src="/images/vk-reproductor 1.png", alt="").footer__links_icon
@@ -118,6 +148,7 @@ block content
         a(href="https://www.instagram.com/pivoale/?igshid=164qwx2yf4n02")
           img(src="/images/instagram 1.png", alt="").footer__links_icon 
 
+  
 block footer
     script(src="/assets/vendor.js")
     script(src="/assets/app.js")

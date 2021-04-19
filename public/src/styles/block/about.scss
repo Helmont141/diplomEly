@@ -1,0 +1,29 @@
+.about {
+  background: #fff;
+  display: none;
+  
+  &__title {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 59px;
+    color: #000000;
+    padding-top: 64px;
+    margin: 0 auto;
+    padding-bottom: 64px;
+    max-width: 1100px;
+  }
+
+  &__description {
+    max-width: 1100px;
+    margin: 0 auto;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    padding-bottom: 64px;
+    color: #000000;
+  }
+}

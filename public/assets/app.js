@@ -2,6 +2,76 @@ var app;
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./js/public/header-swap.js":
+/*!**********************************!*\
+  !*** ./js/public/header-swap.js ***!
+  \**********************************/
+/***/ (() => {
+
+var product = document.querySelector(".product");
+var news = document.querySelector(".news");
+var about = document.querySelector(".about");
+var kontacts = document.querySelector(".kontacts");
+document.querySelectorAll(".header__bar").forEach(function (bar) {
+  bar.querySelectorAll(".header__bar-item").forEach(function (item) {
+    item.onclick = function () {
+      var key = item.dataset.url;
+
+      switch (key) {
+        case "/":
+          product.style.display = "block";
+          news.style.display = "block";
+          about.style.display = "none";
+          kontacts.style.display = "none";
+          break;
+
+        case "/about":
+          product.style.display = "none";
+          news.style.display = "none";
+          kontacts.style.display = "none";
+          about.style.display = "block";
+          break;
+
+        case "/kontacts":
+          product.style.display = "none";
+          news.style.display = "none";
+          about.style.display = "none";
+          kontacts.style.display = "block";
+          break;
+
+        default:
+          break;
+      }
+    };
+  });
+});
+
+/***/ }),
+
+/***/ "./js/public/map.js":
+/*!**************************!*\
+  !*** ./js/public/map.js ***!
+  \**************************/
+/***/ (() => {
+
+ymaps.ready(init);
+
+function init() {
+  // Создание карты.
+  var map = new ymaps.Map("map", {
+    center: [47.287588, 39.709174],
+    zoom: 13,
+    controls: ['zoomControl']
+  });
+  map.behaviors.disable('scrollZoom'); // var myPlacemark = new ymaps.Placemark(
+  //     [47.20916957427229, 39.5956715],
+  // );
+
+  map.geoObjects.add(myPlacemark);
+}
+
+/***/ }),
+
 /***/ "./js/public/news__wrap.js":
 /*!*********************************!*\
   !*** ./js/public/news__wrap.js ***!
@@ -95,6 +165,12 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _news_wrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./news__wrap */ "./js/public/news__wrap.js");
 /* harmony import */ var _news_wrap__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_news_wrap__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _header_swap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header-swap */ "./js/public/header-swap.js");
+/* harmony import */ var _header_swap__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_header_swap__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _map__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./map */ "./js/public/map.js");
+/* harmony import */ var _map__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_map__WEBPACK_IMPORTED_MODULE_2__);
+
+
 
 })();
 
