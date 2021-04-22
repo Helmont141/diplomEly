@@ -1,0 +1,37 @@
+extends layout
+block head
+  title Добрый эль
+  link(rel='stylesheet', href='/assets/styleAdmin.css')
+  link(rel="stylesheet", href="/assets/vendor.css")
+block content
+   
+  .card.text-center
+        .card-header
+          .btn-group
+            a.btn.btn-primary.active(href='/admin/news' ) Новости
+            a.btn.btn-primary(href='/admin/product') Товары
+        .card-body.mx-auto.w-100
+            
+                a(href="/admin/newsAdd").btn.btn-success.float-left.mb-3 Добавить
+                table.table
+                    thead
+                        tr
+                        th(scope='col') id новости
+                        th(scope='col') Дата
+                        th(scope='col') Название
+                        th(scope='col') Описание
+                        th(scope='col') Действия
+                    tbody
+                        each val in news
+                            tr
+                                th #{val.id} 
+                                th #{val.date.toLocaleDateString()}
+                                th #{val.title}
+                                th #{val.description}
+                                td
+                                  form.button-form 
+                                      button.btn.btn-danger.mr-1.delete-entity-button(type='button' name="deleteEntity" data-url-entity='/admin/news/delite' data-id-entity=val.id ) Удалить
+                                      button.btn.btn-warning(type='button' name="updateEntity" data-url-entity='/admin/news/update' data-id-entity= val.id data-name=val.id) Редактировать
+block footer
+    script(src="/assets/vendor.js")
+    script(src="/assets/admin.js")

@@ -1,0 +1,29 @@
+extends layout
+block head
+  title Добрый эль
+  link(rel='stylesheet', href='/assets/styleAdmin.css')
+  link(rel="stylesheet", href="/assets/vendor.css")
+block content
+    .card.text-center
+        .card-header
+          .btn-group
+            a.btn.btn-primary.active(href='/admin/news' ) Новости
+            a.btn.btn-primary(href='/admin/product') Товары
+        .card-body.mx-auto.w-100
+            form.changes-new-or-old
+                .mb-3
+                    label.form-label Дата 
+                    input.form-control(type='date'  name="date")
+                .mb-3
+                    label.form-label Название 
+                    input.form-control(type='text'  name="title")
+                .mb-3
+                    label.form-label Описание 
+                    input.form-control(type='text'  name="description")
+                  
+                .mt-3.d-flex.justify-content-center(name="formBtn")
+                    a(href="/admin/news").btn.btn-primary.card-body-news-CRUD__button-back.mr-3.float-left(type='submit') ← назад 
+                    button.btn.btn-primary.float-left(type='submit' name="formBtn" data-type='add' data-url="/admin/news/newsAdd") Отправить
+block footer
+  script(src="/assets/vendor.js")
+  script(src="/assets/admin.js")

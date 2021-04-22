@@ -63,10 +63,8 @@ function init() {
     zoom: 13,
     controls: ['zoomControl']
   });
-  map.behaviors.disable('scrollZoom'); // var myPlacemark = new ymaps.Placemark(
-  //     [47.20916957427229, 39.5956715],
-  // );
-
+  map.behaviors.disable('scrollZoom');
+  var myPlacemark = new ymaps.Placemark([47.287588, 39.709174]);
   map.geoObjects.add(myPlacemark);
 }
 
@@ -80,9 +78,15 @@ function init() {
 
 document.querySelector(".news__wrap").querySelectorAll(".news-card").forEach(function (newsCard) {
   src = newsCard.dataset.src;
-  if (src == undefined) return;
-  newsCard.style.background = "url(\"".concat(src, "\") no-repeat ");
-  newsCard.style.backgroundSize = "cover";
+  if (src == undefined) return; // 
+
+  if (src % 2 == 0) {
+    newsCard.style.background = "url(\"/images/Fon-News.png\") no-repeat ";
+    newsCard.style.backgroundSize = "cover";
+  } else {
+    newsCard.style.background = "url(\"/images/Fon-News2.png\") no-repeat ";
+    newsCard.style.backgroundSize = "cover";
+  }
 });
 
 /***/ })
