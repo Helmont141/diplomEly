@@ -37,5 +37,9 @@
     color: #FFFFFF;
     margin: 56px auto 0;
     text-align: center;
+
+    @include _768{
+      display: none;
+    }
   }
 }

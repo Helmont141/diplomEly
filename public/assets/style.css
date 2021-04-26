@@ -42,6 +42,11 @@
   margin: 56px auto 0;
   text-align: center;
 }
+@media (max-width: 768px) {
+  .header__title {
+    display: none;
+  }
+}
 
 @font-face {
   font-family: "lobster";
@@ -109,6 +114,7 @@
   font-size: 22px;
   line-height: 27px;
   color: #000000;
+  text-align: center;
   margin-top: 18px;
 }
 .product-card__structure {

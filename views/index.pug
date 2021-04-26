@@ -28,15 +28,15 @@ block content
         .product-card
           img(src="/images/card.png", alt="").product-card__bg
           .product-card__description 
-            p.product-card__price #{val.price} P 
+            p.product-card__price до #{val.price} P 
             p.product-card__title #{val.name}
             p.product-card__structure #{val.description}
 
   section.news.wrap
     p.news__title Последние спортивные новости
     .news__wrap 
-      each val in news
-        .news-card(data-src=`${val.id}`)
+      each val,index in news
+        .news-card(data-src=`${index}`)
           .news-card_bg
             p.news-card__date #{val.date.toLocaleDateString()}
             p.news-card__title #{val.title}
