@@ -8,3 +8,13 @@
 Медовуха Вишневая от 75 до 210 плотность 20% алкоголь 5.8%
 Медовуха Смородиновая от 75 до 210 плотность 16% алкоголь 4.8%
 
+CREATE TABLE products(
+	id int NOT NULL AUTO_INCREMENT,
+	priceS CHAR(45),
+	priceM CHAR(45),
+	priceL CHAR(45),
+	name CHAR(150),
+	description CHAR(150),
+	 PRIMARY KEY (id)
+);
+	
