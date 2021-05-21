@@ -6,6 +6,7 @@ block head
   link(rel='shortcut icon' href='/images/beer.png' type='image/png')
   script(src="https://api-maps.yandex.ru/2.1/?apikey=6d5d76f3-8360-43a5-b6ba-ba62da5950bb,150&lang=ru_RU" type="text/javascript")
 block content
+  include adult
   section.header
     img(src="/images/fonHeader.png", alt="").header__bg
     .wrap
@@ -19,18 +20,21 @@ block content
         img(src="/images/beer.png", alt="").header__bar-item_border
 
       h1.header__title Добрый Эль
-
+  section.toPopUp 
+    
   section.product.wrap
     p.product__title Продукция
 
     .product__wrap
       each val in product
-        .product-card
+        .product-card(data-popup=`<div class="product-full__shodow"> <div class="product-full"> <img src="/images/card.png" class="product-full__bg"> <div class='product-full__body'>  <div class="product-full__description"><p class="product-full__title">${val.name}</p> <span class="product-full__close">&#10008;</span></div><table class='product-full__table'><thead><tr><th> Цена за маленький</th><th> Цена за средний</th><th> Цена за большой</th></tr></thead><tbody><tr><th>${val.priceS}</th><th>${val.priceM}</th><th>${val.priceL}</th></tr></tbody></table><p class="product-full__descrit"> ${val.description}</p></div></div></div>`)
           img(src="/images/card.png", alt="").product-card__bg
           .product-card__description 
-            p.product-card__price до #{val.price} P 
+            p.product-card__price до #{val.priceL} P 
             p.product-card__title #{val.name}
             p.product-card__structure #{val.description}
+
+        
 
   section.news.wrap
     p.news__title Последние спортивные новости

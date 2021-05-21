@@ -17,7 +17,9 @@ block content
                     thead
                         tr
                         th(scope='col') id тоавра
-                        th(scope='col') Цена
+                        th(scope='col') Цена за маленький
+                        th(scope='col') Цена за средний
+                        th(scope='col') Цена за большой
                         th(scope='col') Название
                         th(scope='col') Описание
                         th(scope='col') Действия
@@ -25,7 +27,9 @@ block content
                         each val in product
                             tr
                                 th #{val.id} 
-                                th #{val.price}
+                                th #{val.priceS}
+                                th #{val.priceM}
+                                th #{val.priceL}
                                 th #{val.name}
                                 th #{val.description}
                                 td

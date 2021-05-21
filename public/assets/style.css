@@ -61,6 +61,7 @@
   border-radius: 8px 8px 0px 0px;
   margin-top: 80px;
   padding-bottom: 130px;
+  cursor: pointer;
 }
 .product__title {
   font-family: "Montserrat";
@@ -82,6 +83,47 @@
   .product__wrap {
     justify-content: space-around;
   }
+}
+
+.product-full {
+  display: flex;
+  position: fixed;
+  left: 20%;
+  background: #FFF;
+  z-index: 1;
+  top: 15%;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.product-full__table {
+  border-spacing: 4px;
+}
+.product-full__bg {
+  max-width: 500px;
+}
+.product-full__body {
+  width: 100%;
+}
+.product-full__close {
+  cursor: pointer;
+}
+.product-full__description {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+}
+.product-full__descrit {
+  font-size: 20px;
+  text-align: center;
+  display: block;
+}
+.product-full__shodow {
+  width: 100%;
+  min-height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 1;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
 }
 
 .product-card {
@@ -301,6 +343,44 @@
 .kontacts__info-block_icon {
   width: 45px;
   margin-right: 16px;
+}
+
+.adult {
+  width: 100%;
+  min-height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 2;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+}
+.adult__wrap {
+  background: #FFF;
+  max-width: 350px;
+  z-index: 2;
+  margin: 80px auto;
+  padding: 32px;
+  border: 1px solid red;
+  box-shadow: 0 0 20px red;
+  border-radius: 16px;
+  text-align: center;
+}
+.adult__controll {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 16px;
+}
+.adult__btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: #FFF;
+  cursor: pointer;
+}
+.adult__btn_green {
+  background: green;
+}
+.adult__btn_red {
+  background: red;
 }
 
 * {
