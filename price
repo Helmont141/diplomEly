@@ -18,3 +18,18 @@ CREATE TABLE products(
 	 PRIMARY KEY (id)
 );
 	
+	
+CREATE TABLE news(
+	id int NOT NULL AUTO_INCREMENT,
+	date datetime,
+	title CHAR(45),
+	description CHAR(150),
+	 PRIMARY KEY (id)
+);
+
+CREATE TABLE user(
+	id int NOT NULL AUTO_INCREMENT,
+	login CHAR(100),
+	password CHAR(100),
+	 PRIMARY KEY (id)
+);
