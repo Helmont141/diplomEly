@@ -66,9 +66,9 @@ adminRouter.post('/news/newsAdd', adminCeck, async function (req, res, next) {
   } = req.body;
   try {
     await knex('news').insert({
-      date: decodeURI(date),
-      title: decodeURI(title),
-      description: decodeURI(description)
+      date: date,
+      title: title,
+      description:description
     });
     res.end();
   } catch (error) {
@@ -103,9 +103,9 @@ adminRouter.patch('/news/update:id', adminCeck, async function (req, res, next) 
   } = req.body;
   const id = req.params.id;
   await knex('news').where('id', id).update({
-    date: decodeURI(date),
-    title: decodeURI(title),
-    description: decodeURI(description)
+    date: date,
+    title: title,
+    description: description
   });
   res.end();
 });
@@ -144,12 +144,12 @@ adminRouter.post('/product/productAdd', adminCeck, async function (req, res, nex
   try {
     if (priceS > 0) {
       await knex('products').insert({
-        priceS: decodeURI(priceS),
-        priceM: decodeURI(priceM),
-        priceL: decodeURI(priceL),
+        priceS: priceS,
+        priceM: priceM,
+        priceL: priceL,
 
-        name: decodeURI(title),
-        description: decodeURI(description)
+        name: title,
+        description: description
       });
       res.end();
     }
@@ -189,12 +189,12 @@ adminRouter.patch('/product/update:id', adminCeck, async function (req, res, nex
   try {
     if (priceS > 0) {
       await knex('products').where('id', id).update({
-        priceS: decodeURI(priceS),
-        priceM: decodeURI(priceM),
-        priceL: decodeURI(priceL),
+        priceS: priceS,
+        priceM: priceM,
+        priceL: priceL,
 
-        name: decodeURI(title),
-        description: decodeURI(description)
+        name: title,
+        description: description
       });
       res.end();
     }
